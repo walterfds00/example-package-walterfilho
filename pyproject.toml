@@ -5,10 +5,13 @@ requires = ["hatchling"]
 build-backend = "hatchling.build" 
 
 [project] 
+dynamic = ["version"] 
 name = "example_package_walterfilho" 
-version = "0.1.0" 
 dependencies = ["numpy"]
 readme="README.md"
+
+[tool.hatch]
+version.path = "src/example_package_walterfilho/__init__.py"
 
 [project.optional-dependencies]
 test = ["pytest"]
